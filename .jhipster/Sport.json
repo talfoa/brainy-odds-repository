@@ -1,0 +1,37 @@
+{
+  "name": "Sport",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "league",
+      "otherEntityRelationshipName": "sport",
+      "relationshipName": "league"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "sport",
+      "relationshipName": "sport"
+    }
+  ],
+  "changelogDate": "20201027154505",
+  "entityTableName": "sport",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
