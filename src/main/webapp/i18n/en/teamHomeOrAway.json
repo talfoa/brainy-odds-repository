@@ -1,0 +1,9 @@
+{
+  "brainyoddsApp": {
+    "TeamHomeOrAway": {
+      "null": "",
+      "HOME": "HOME",
+      "AWAY": "AWAY"
+    }
+  }
+}
