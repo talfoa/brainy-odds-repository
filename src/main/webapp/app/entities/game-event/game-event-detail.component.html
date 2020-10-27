@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="gameEvent">
+            <h2><span jhiTranslate="brainyoddsApp.gameEvent.detail.title">Game Event</span> {{ gameEvent.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.timeOfMessage">Time Of Message</span></dt>
+                <dd>
+                    <span>{{ gameEvent.timeOfMessage }}</span>
+                </dd>
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.gameEventId">Game Event Id</span></dt>
+                <dd>
+                    <span>{{ gameEvent.gameEventId }}</span>
+                </dd>
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.eventType">Event Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'brainyoddsApp.GameEventType.' + gameEvent.eventType }}">{{ gameEvent.eventType }}</span>
+                </dd>
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.team">Team</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'brainyoddsApp.TeamHomeOrAway.' + gameEvent.team }}">{{ gameEvent.team }}</span>
+                </dd>
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.active">Active</span></dt>
+                <dd>
+                    <span>{{ gameEvent.active }}</span>
+                </dd>
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.timeOfEventOccurence">Time Of Event Occurence</span></dt>
+                <dd>
+                    <span>{{ gameEvent.timeOfEventOccurence }}</span>
+                </dd>
+                <dt><span jhiTranslate="brainyoddsApp.gameEvent.match">Match</span></dt>
+                <dd>
+                    <div *ngIf="gameEvent.matchId">
+                        <a [routerLink]="['/match', gameEvent.matchId, 'view']">{{ gameEvent.matchId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/game-event', gameEvent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
