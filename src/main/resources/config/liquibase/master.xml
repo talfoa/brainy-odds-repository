@@ -14,7 +14,23 @@
     <property name="uuidType" value="uuid" dbms="h2, mssql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027163855_added_entity_Region.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027163955_added_entity_Sport.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164055_added_entity_League.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164155_added_entity_Team.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164255_added_entity_Player.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164355_added_entity_Match.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164455_added_entity_GameEvent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164555_added_entity_ScoreBoard.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164655_added_entity_Opportunity.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20201027164055_added_entity_constraints_League.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164155_added_entity_constraints_Team.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164255_added_entity_constraints_Player.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164355_added_entity_constraints_Match.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164455_added_entity_constraints_GameEvent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164555_added_entity_constraints_ScoreBoard.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201027164655_added_entity_constraints_Opportunity.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>
